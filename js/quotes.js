@@ -41,8 +41,8 @@ author: 'Jim Rohn'
 },
 ];
 
-const quote = document.quertSelector('#quote span:first-child');
-const author = document.quertSelector('#quote span:last-child');
+const quote = document.querySelector('#quote span:first-child');
+const author = document.querySelector('#quote span:last-child');
 
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
