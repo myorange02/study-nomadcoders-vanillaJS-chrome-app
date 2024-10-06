@@ -5,8 +5,10 @@ const toDoList = document.getElementById("todo-list");
 function paintToDo(newToDo) {
   const li = document.createElement("li");
   const span = document.createElement("span");
+  const button = document.createElement("button");
   span.innerText = newToDo;
   li.appendChild(span);
+  toDoList.appendChild(li);
 }
 
 function handleToDoSubmit(event) {
