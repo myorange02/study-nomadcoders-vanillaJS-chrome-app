@@ -52,3 +52,8 @@ if (savedToDos !== null) {
   toDos = parsedToDos;
   parsedToDos.forEach(paintToDo);
 }
+
+function sexyFilter(todo) {
+  return todo.id !== 0;
+}
+
