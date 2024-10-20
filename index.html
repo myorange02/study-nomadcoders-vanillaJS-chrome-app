@@ -6,31 +6,48 @@
     <meta name="viewport" content="width=device-width">
     <title>Momentum App</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <form class="hidden" id="login-form">
-      <input required maxlength="15" type="text" placeholder="What is your name?" />
-      <button>Log In</button>
-    </form>
-    <h2 id="clock">00:00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
-      <span></span>
-      <span></span>
-    </div>
-    <div id="weather">
-      <span></span>
-      <span></span>
-    </div>
+    <header>
+      <div id="weather">
+        <span></span>
+        <br>
+        <span></span>
+      </div>
+      <div class="login-container">
+        <form class="hidden" id="login-form">
+          <input required maxlength="15" type="text" placeholder="What is your name?" />
+          <button>Log In</button>
+        </form>
+      </div>
+      <div id="greeting" class="hidden"></div>
+    </header>
+    <main>
+      <div id="clock">00:00:00</div>
+      <div class="todo-container">
+        <form id="todo-form">
+          <input type="text" placeholder="Write a To Do and Press Enter" required />
+        </form>
+        <ul id="todo-list"></ul>
+      </div>
+    </main>
+    <footer>
+      <div id="quote">
+        <div></div>
+        <div></div>
+      </div>
+    </footer>
+    
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
-    <script src="js/background.js"></script>
+    <!-- <script src="js/background.js"></script> -->
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
   </body>

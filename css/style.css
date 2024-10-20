@@ -2,14 +2,201 @@
   display: none;
 }
 
-img {
-  position:absolute;
-  width:100%;
-  height:100%;
-  left: 0px;
-  top: 0px;
-  right:0px;
-  bottom:0px;
-  z-index: -1;
-  opacity:80%;
+:root {
+  --font-futuristic: "Audiowide", sans-serif;
+  --font-rubik: "Rubik", sans-serif;
+  --font-schoolbell: "Schoolbell", cursive;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-schoolbell);
+  background-image: url(../img/1.jpg);
+}
+
+@keyframes round {
+  from {
+    border-radius: 0;
+    border-color: #aaa;
+  }
+  to {
+    border-radius: 30px;
+    border-color: cornflowerblue;
+  }
+}
+
+/* header */
+
+header {
+  width: 100vw;
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#weather {
+  width: auto;
+  height: auto;
+  padding: 0 20px;
+}
+
+.login-container {
+  width: auto;
+  height: auto;
+  padding: 0 10px;
+}
+
+.login-container input {
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-family: var(--font-schoolbell);
+}
+
+.login-container input:focus {
+  outline: none;
+  animation: round 1s forwards;
+}
+
+.login-container input::placeholder {
+  font-family: var(--font-schoolbell);
+}
+
+.login-container button {
+  padding: 10px;
+  width: 60px;
+  font-family: var(--font-schoolbell);
+  background-color: white;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  transition: all 0.1s ease-in-out;
+}
+
+.login-container button:hover {
+  border: none;
+  color: #fff;
+  background-color: cornflowerblue;
+}
+
+#greeting {
+  padding: 0 20px;
+  font-size: 30px;
+}
+
+/* main */
+
+main {
+  width: 100vw;
+  height: 84vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#clock {
+  top: 20%;
+  width: 100vw;
+  text-align: center;
+  font-size: 160px;
+  /*font-family: var(--font-futuristic);*/
+  flex-grow: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-container {
+  width: 100vw;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#todo-form input {
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+  font-size: 22px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-family: var(--font-schoolbell);
+}
+
+#todo-form input:focus {
+  outline: none;
+  animation: round 1s forwards;
+}
+
+#todo-form input::placeholder {
+  font-family: var(--font-schoolbell);
+}
+
+#todo-list {
+  list-style-type: none;
+}
+
+#todo-list li {
+  padding: 2px;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+#todo-list li:hover {
+  transform: scale(1.2);
+}
+
+#todo-list li span {
+  padding: 0 10px;
+}
+
+#todo-list li button {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  transition: all 0.1s ease-in-out;
+}
+
+#todo-list li button:hover {
+  color: #fff;
+  background-color: cornflowerblue;
+}
+
+/* footer */
+
+footer {
+  width: 100vw;
+  height: 7vh;
+}
+
+#quote {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#quote div {
+  text-align: center;
+}
+
+#quote div:first-child {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#quote div:last-child {
+  font-size: 15px;
 }

@@ -7,8 +7,8 @@ function onGeoOk(position) {
   fetch(url).then(response => response.json()).then(data => {
     const weather = document.querySelector("#weather span:first-child");
     const city = document.querySelector("#weather span:last-child");
-    city.innerText = data.name;
-    weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+    city.innerText = `Where u r! => ${data.name}`;
+    weather.innerText = `Today's Weather => ${data.main.temp}°C ${data.weather[0].main}`;
   });
 }
 
